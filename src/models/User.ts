@@ -7,7 +7,7 @@ import {
 } from 'typeorm';
 
 //Estamos informando que esse model vai ser armazenado dentro da tabela de appointments
-@Entity('appointments')
+@Entity('users')
 class User {
   @PrimaryGeneratedColumn('uuid')
   id: string;
