@@ -6,7 +6,7 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 
-//Estamos informando que esse model vai ser armazenado dentro da tabela de appointments
+// Estamos informando que esse model vai ser armazenado dentro da tabela de appointments
 @Entity('users')
 class User {
   @PrimaryGeneratedColumn('uuid')
