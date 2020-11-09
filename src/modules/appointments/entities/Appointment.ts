@@ -8,9 +8,9 @@ import {
   JoinColumn,
 } from 'typeorm';
 
-import User from './User';
+import User from '../../users/services/User';
 
-//Estamos informando que esse model vai ser armazenado dentro da tabela de appointments
+// Estamos informando que esse model vai ser armazenado dentro da tabela de appointments
 @Entity('appointments')
 class Appointment {
   @PrimaryGeneratedColumn('uuid')
