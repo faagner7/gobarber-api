@@ -1,6 +1,6 @@
 ## DOCKER CONTAINER NAME:
 
-- gostack_postgress (macbook);
+- gostack_postgress;
 
 # Recuperação de senha
 

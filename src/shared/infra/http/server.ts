@@ -1,15 +1,13 @@
-/* eslint-disable no-console */
-import 'reflect-metadata';
-
 import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import 'express-async-errors';
+import 'reflect-metadata';
 
-import routes from './shared/routes';
-import uploadConfig from './config/upload';
-import AppError from './shared/errors/AppError';
+import uploadConfig from '@config/upload';
+import AppError from '@shared/errors/AppError';
+import routes from './routes';
 
-import './shared/database';
+import '../typeorm';
 
 const app = express();
 
@@ -29,6 +27,7 @@ app.use(
       });
     }
 
+    // eslint-disable-next-line no-console
     console.error(err);
 
     return response.status(500).json({

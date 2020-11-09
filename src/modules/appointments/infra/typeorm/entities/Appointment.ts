@@ -8,7 +8,7 @@ import {
   JoinColumn,
 } from 'typeorm';
 
-import User from '../../users/services/User';
+import User from '@modules/users/infra/typeorm/entities/User';
 
 // Estamos informando que esse model vai ser armazenado dentro da tabela de appointments
 @Entity('appointments')
