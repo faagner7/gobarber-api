@@ -9,6 +9,7 @@ import AppError from '../../../shared/errors/AppError';
 import User from './User';
 
 interface Request {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   user_id: any;
   avatarFilename: string;
 }
