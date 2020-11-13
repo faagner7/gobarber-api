@@ -2,6 +2,8 @@ import { Router } from 'express';
 import multer from 'multer';
 import uploadConfig from '@config/upload';
 
+import UsersRespository from '@modules/users/infra/typeorm/repositories/UsersRepository';
+
 import CreateUserService from '@modules/users/services/CreateUserService';
 import UpdateUserAvatarService from '@modules/users/services/UpdateUserAvatarService';
 
@@ -13,7 +15,8 @@ const upload = multer(uploadConfig);
 usersRouter.post('/', async (request, response) => {
   const { name, email, password } = request.body;
 
-  const createUser = new CreateUserService();
+  const usersRespository = new UsersRespository();
+  const createUser = new CreateUserService(usersRespository);
 
   const user = await createUser.execute({
     name,
@@ -33,8 +36,9 @@ usersRouter.patch(
   upload.single('avatar'),
   async (request, response) => {
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    const usersRespository = new UsersRespository();
     const userId = request.user!;
-    const updateUserAvatar = new UpdateUserAvatarService();
+    const updateUserAvatar = new UpdateUserAvatarService(usersRespository);
     const user = await updateUserAvatar.execute({
       user_id: userId,
       avatarFilename: request.file.filename,
