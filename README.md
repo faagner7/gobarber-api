@@ -2,6 +2,12 @@
 
 - gostack_postgress;
 
+## DATABASE NAME
+
+# MACBOOK -> "gostack_gobarber"
+
+# UBUNTU -> "postgres"
+
 # Recuperação de senha
 
 **RF (Recursos Funcionais)**
