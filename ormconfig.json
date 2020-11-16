@@ -4,7 +4,7 @@
   "port": 5432,
   "username": "postgres",
   "password": "docker",
-  "database": "gostack_gobarber",
+  "database": "postgres",
   "_comment": "database no MACBOOK: gostack_gobarber; database no UBUNTU: postgres;",
   "entities": ["./src/modules/*/infra/typeorm/entities/*.ts"],
   "migrations": ["./src/shared/infra/typeorm/migrations/*.ts"],
