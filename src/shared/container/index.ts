@@ -9,6 +9,9 @@ import AppointmentsRepository from '@modules/appointments/infra/typeorm/reposito
 import IUsersRepository from '@modules/users/repositories/IUsersRepository';
 import UsersRepository from '@modules/users/infra/typeorm/repositories/UsersRepository';
 
+// import IUserTokenRepository from '@modules/users/repositories/IUserTokenRepository';
+// import UsersRepository from '@modules/users/infra/typeorm/repositories/UsersToe';
+
 // registerSingleton cria uma classe para ser usada
 // durante todo o ciclo de vida da aplicação,
 // Se usassemos o regiter(), para cada interação, ele criaria uma classe.
